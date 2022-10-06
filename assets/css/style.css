@@ -25,7 +25,291 @@ body::before {
   top: 0;
   height: 100vh;
 }
+/*======================================*/
+@keyframes animate {
+  0%{
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+      border-radius: 0;
+  }
+  100%{
+      transform: translateY(-1000px) rotate(720deg);
+      opacity: 0;
+      border-radius: 50%;
+  }
+}
 
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background: #010e1b;
+  overflow: hidden;
+}
+.background li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 19s linear infinite;
+}
+
+
+
+
+.background li:nth-child(0) {
+  left: 49%;
+  width: 112px;
+  height: 112px;
+  bottom: -112px;
+  animation-delay: 1s;
+}
+.background li:nth-child(1) {
+  left: 13%;
+  width: 82px;
+  height: 82px;
+  bottom: -82px;
+  animation-delay: 2s;
+}
+.background li:nth-child(2) {
+  left: 30%;
+  width: 47px;
+  height: 47px;
+  bottom: -47px;
+  animation-delay: 4s;
+}
+.background li:nth-child(3) {
+  left: 33%;
+  width: 104px;
+  height: 104px;
+  bottom: -104px;
+  animation-delay: 2s;
+}
+.background li:nth-child(4) {
+  left: 87%;
+  width: 70px;
+  height: 70px;
+  bottom: -70px;
+  animation-delay: 4s;
+}
+.background li:nth-child(5) {
+  left: 85%;
+  width: 107px;
+  height: 107px;
+  bottom: -107px;
+  animation-delay: 13s;
+}
+.background li:nth-child(6) {
+  left: 44%;
+  width: 48px;
+  height: 48px;
+  bottom: -48px;
+  animation-delay: 28s;
+}
+.background li:nth-child(7) {
+  left: 5%;
+  width: 106px;
+  height: 106px;
+  bottom: -106px;
+  animation-delay: 16s;
+}
+.background li:nth-child(8) {
+  left: 41%;
+  width: 106px;
+  height: 106px;
+  bottom: -106px;
+  animation-delay: 14s;
+}
+.background li:nth-child(9) {
+  left: 52%;
+  width: 95px;
+  height: 95px;
+  bottom: -95px;
+  animation-delay: 13s;
+}
+.background li:nth-child(10) {
+  left: 42%;
+  width: 13px;
+  height: 13px;
+  bottom: -13px;
+  animation-delay: 36s;
+}
+.background li:nth-child(11) {
+  left: 54%;
+  width: 8px;
+  height: 8px;
+  bottom: -8px;
+  animation-delay: 19s;
+}
+.background li:nth-child(12) {
+  left: 21%;
+  width: 57px;
+  height: 57px;
+  bottom: -57px;
+  animation-delay: 22s;
+}
+.background li:nth-child(13) {
+  left: 17%;
+  width: 70px;
+  height: 70px;
+  bottom: -70px;
+  animation-delay: 30s;
+}
+.background li:nth-child(14) {
+  left: 10%;
+  width: 69px;
+  height: 69px;
+  bottom: -69px;
+  animation-delay: 23s;
+}
+.background li:nth-child(15) {
+  left: 54%;
+  width: 59px;
+  height: 59px;
+  bottom: -59px;
+  animation-delay: 49s;
+}
+.background li:nth-child(16) {
+  left: 2%;
+  width: 102px;
+  height: 102px;
+  bottom: -102px;
+  animation-delay: 75s;
+}
+.background li:nth-child(17) {
+  left: 66%;
+  width: 93px;
+  height: 93px;
+  bottom: -93px;
+  animation-delay: 15s;
+}
+.background li:nth-child(18) {
+  left: 10%;
+  width: 5px;
+  height: 5px;
+  bottom: -5px;
+  animation-delay: 88s;
+}
+.background li:nth-child(19) {
+  left: 84%;
+  width: 69px;
+  height: 69px;
+  bottom: -69px;
+  animation-delay: 84s;
+}
+.background li:nth-child(20) {
+  left: 3%;
+  width: 41px;
+  height: 41px;
+  bottom: -41px;
+  animation-delay: 16s;
+}
+.background li:nth-child(21) {
+  left: 81%;
+  width: 111px;
+  height: 111px;
+  bottom: -111px;
+  animation-delay: 19s;
+}
+.background li:nth-child(22) {
+  left: 65%;
+  width: 108px;
+  height: 108px;
+  bottom: -108px;
+  animation-delay: 102s;
+}
+.background li:nth-child(23) {
+  left: 14%;
+  width: 52px;
+  height: 52px;
+  bottom: -52px;
+  animation-delay: 85s;
+}
+.background li:nth-child(24) {
+  left: 42%;
+  width: 93px;
+  height: 93px;
+  bottom: -93px;
+  animation-delay: 84s;
+}
+.background li:nth-child(25) {
+  left: 39%;
+  width: 43px;
+  height: 43px;
+  bottom: -43px;
+  animation-delay: 113s;
+}
+.background li:nth-child(26) {
+  left: 42%;
+  width: 87px;
+  height: 87px;
+  bottom: -87px;
+  animation-delay: 2s;
+}
+.background li:nth-child(27) {
+  left: 47%;
+  width: 22px;
+  height: 22px;
+  bottom: -22px;
+  animation-delay: 78s;
+}
+.background li:nth-child(28) {
+  left: 73%;
+  width: 102px;
+  height: 102px;
+  bottom: -102px;
+  animation-delay: 130s;
+}
+.background li:nth-child(29) {
+  left: 48%;
+  width: 52px;
+  height: 52px;
+  bottom: -52px;
+  animation-delay: 33s;
+}
+.background li:nth-child(30) {
+  left: 14%;
+  width: 98px;
+  height: 98px;
+  bottom: -98px;
+  animation-delay: 10s;
+}
+.background li:nth-child(31) {
+  left: 77%;
+  width: 83px;
+  height: 83px;
+  bottom: -83px;
+  animation-delay: 152s;
+}
+.background li:nth-child(32) {
+  left: 29%;
+  width: 74px;
+  height: 74px;
+  bottom: -74px;
+  animation-delay: 87s;
+}
+.background li:nth-child(33) {
+  left: 29%;
+  width: 25px;
+  height: 25px;
+  bottom: -25px;
+  animation-delay: 95s;
+}
+.background li:nth-child(34) {
+  left: 25%;
+  width: 101px;
+  height: 101px;
+  bottom: -101px;
+  animation-delay: 169s;
+}
+
+/*======================================*/
 @media (min-width: 1024px) {
   body::before {
     background-attachment: fixed;
@@ -119,7 +403,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 992px) {
   #header h1 {
-    font-size: 36px;
+    font-size: 28px;
   }
   #header h2 {
     font-size: 20px;
@@ -178,7 +462,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-menu a:hover:before, .nav-menu li:hover > a:before, .nav-menu .active > a:before {
   visibility: visible;
-  width: 25px;
+  width: 20px;
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
@@ -271,7 +555,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Header Top */
 #header.header-top {
-  height: 90px;
+  height: 70px;
   position: fixed;
   left: 0;
   top: 0;
@@ -283,10 +567,18 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
-#header.header-top h1 {
-  margin-right: auto;
-  font-size: 36px;
+#header.header-top img
+{
+  display: none;
 }
+#header.header-top h1 {
+  display: none;
+  margin-right: auto;
+  font-size: 28px;
+  font-weight: bold;
+  left: -40px;
+}
+
 
 #header.header-top .container {
   display: flex;
