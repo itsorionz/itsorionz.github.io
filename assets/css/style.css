@@ -1,10 +1,3 @@
-/**
-* Template Name: Personal - v2.1.0
-* Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -25,8 +18,9 @@ body::before {
   top: 0;
   height: 100vh;
 }
-/*======================================*/
-@keyframes animate {
+
+/*=============== OLD BACKGROUND ANIMATION =======================*/
+/* @keyframes animate {
   0%{
       transform: translateY(0) rotate(0deg);
       opacity: 1;
@@ -59,8 +53,6 @@ body::before {
   background: rgba(255, 255, 255, 0.2);
   animation: animate 19s linear infinite;
 }
-
-
 
 
 .background li:nth-child(0) {
@@ -307,7 +299,72 @@ body::before {
   height: 101px;
   bottom: -101px;
   animation-delay: 169s;
+} */
+
+/*=============== CODE BACKGROUND ANIMATION =======================*/
+
+#snippet-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none; /* Prevent interaction with other elements */
+  z-index: 1; /* Place above other content */
+  background-color: transparent; /* Ensure the background is transparent */
 }
+
+.code-snippet {
+  position: absolute;
+  padding: 15px;
+  border-radius: 8px;
+  opacity: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  animation: fly 10s infinite linear;
+  font-family: 'Courier New', Courier, monospace;
+  color: white /* Default text color */
+}
+.code-snippet pre {
+  color: #12d640;
+}
+/* 
+.code-snippet {
+  position: absolute;
+  padding: 15px;
+  border-radius: 8px;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  opacity: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  animation: fly 10s infinite linear;
+} */
+
+/* background-color: rgba(255, 255, 255, 0.2); */
+@keyframes fly {
+  0% {
+      transform: translate(0, 0) rotate(0deg);
+      opacity: 0;
+  }
+  50% {
+      opacity: 1;
+  }
+  100% {
+      transform: translate(var(--translateX), var(--translateY)) rotate(var(--rotateDeg));
+      opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .code-snippet {
+      font-size: 10px;
+      padding: 10px;
+  }
+}
+
+
 
 /*======================================*/
 @media (min-width: 1024px) {
@@ -1387,4 +1444,40 @@ section .container {
     right: 0;
     transform: translateX(-50%);
   }
+}
+@media (max-width: 360px) {
+  .social-links {
+    justify-content: center;
+  }
+  .contact .info-box .social-links {
+    margin: 37px 0 0 16px; 
+  }
+}
+@media (max-width: 576px) {
+  .social-links {
+    justify-content: center;
+  }
+  .contact .info-box .social-links {
+    margin: 37px 0 0 16px; 
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) { 
+  .social-links {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .social-links {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+
+}
+
+@media (min-width: 1200px) {
+  
 }

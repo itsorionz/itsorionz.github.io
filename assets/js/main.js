@@ -1,9 +1,3 @@
-/**
-* Template Name: Personal - v2.1.0
-* Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 !(function($) {
   "use strict";
 
@@ -149,3 +143,49 @@
   });
 
 })(jQuery);
+
+
+// Code Background Function //
+
+document.addEventListener('DOMContentLoaded', () => {
+  function getRandomValue(min, max) {
+      return Math.random() * (max - min) + min;
+  }
+
+  function getRandomColor() {
+      const r = Math.floor(getRandomValue(0, 255));
+      const g = Math.floor(getRandomValue(0, 255));
+      const b = Math.floor(getRandomValue(0, 255));
+      return `rgb(${r}, ${g}, ${b})`;
+  }
+
+  document.querySelectorAll('.code-snippet').forEach(snippet => {
+      const viewportWidth = window.innerWidth;
+      const viewportHeight = window.innerHeight;
+
+      let fontSizeMin = 12;
+      let fontSizeMax = 20;
+
+      if (viewportWidth < 768) { // Adjust font size range for mobile
+          fontSizeMin = 8;
+          fontSizeMax = 14;
+      }
+
+      const randomTranslateX = `${getRandomValue(-viewportWidth, viewportWidth)}px`;
+      const randomTranslateY = `${getRandomValue(-viewportHeight, viewportHeight)}px`;
+      const randomRotate = `${getRandomValue(-360, 360)}deg`;
+      const randomFontSize = `${getRandomValue(fontSizeMin, fontSizeMax)}px`; // Random font size
+      const randomColor = getRandomColor(); // Generate random text color
+
+      snippet.style.setProperty('--translateX', randomTranslateX);
+      snippet.style.setProperty('--translateY', randomTranslateY);
+      snippet.style.setProperty('--rotateDeg', randomRotate);
+      snippet.style.fontSize = randomFontSize;
+      snippet.style.color = randomColor;
+
+      // Position the snippet at a random starting position within the viewport
+      snippet.style.left = `${getRandomValue(0, viewportWidth)}px`;
+      snippet.style.top = `${getRandomValue(0, viewportHeight)}px`;
+  });
+});
+
