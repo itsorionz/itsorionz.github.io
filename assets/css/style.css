@@ -302,7 +302,7 @@ body::before {
 } */
 
 /*=============== CODE BACKGROUND ANIMATION =======================*/
-
+ 
 #snippet-container {
   position: fixed;
   top: 0;
@@ -310,9 +310,9 @@ body::before {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  pointer-events: none; /* Prevent interaction with other elements */
-  z-index: 1; /* Place above other content */
-  background-color: transparent; /* Ensure the background is transparent */
+  pointer-events: none; 
+  z-index: 1;
+  background-color: transparent;
 }
 
 .code-snippet {
@@ -324,12 +324,13 @@ body::before {
   word-wrap: break-word;
   animation: fly 10s infinite linear;
   font-family: 'Courier New', Courier, monospace;
-  color: white /* Default text color */
+  color: white
 }
 .code-snippet pre {
   color: #12d640;
-}
-/* 
+} 
+
+/* old 
 .code-snippet {
   position: absolute;
   padding: 15px;
@@ -365,9 +366,25 @@ body::before {
 }
 
 
+/*=============== VIDEO BACKGROUND ANIMATION =======================*/
+/* #bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
 
+
+video {
+  object-fit: contain;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+} */
 /*======================================*/
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   body::before {
     background-attachment: fixed;
   }
@@ -384,7 +401,7 @@ a:hover {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
-}
+} */
 
 /*--------------------------------------------------------------
 # Header
