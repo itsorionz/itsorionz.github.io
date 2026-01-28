@@ -19,7 +19,6 @@
   <title>iamAnamul Haque Sohel</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
-
   <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -36,29 +35,17 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169007209-3"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'UA-169007209-3');
   </script>
-
-
-
-  <!-- =======================================================
-  * Template Name: Personal - v2.1.0
-  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
-
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BB8W2X" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
@@ -67,11 +54,11 @@
   <header id="header" class="header-tops">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-lg-5 px-5 pl-lg-0 pb-5 pb-lg-0 proimage">
+        <div class="col-lg-4 col-md-3 px-5 pl-lg-0 pb-5 pb-lg-0 proimage">
           <img class="img-fluid w-100 rounded-circle shadow-sm proImg" src="assets/img/profile.jpg"
             alt="Aamul Haque Sohel">
         </div>
-        <div class="col-lg-7 text-center text-lg-left">
+        <div class="col-lg-8 col-md-9 text-center text-lg-left">
           <h1><a href="index.html">Anamul Haque Sohel</a></h1>
           <h2 style="color:#fff">I'm <span class="typing" style="color:#12D640"></span></h2>
           <nav class="nav-menu d-none d-lg-block">
@@ -102,8 +89,6 @@
           </div>
         </div>
       </div>
-
-
 
     </div>
   </header><!-- End Header -->
@@ -139,28 +124,28 @@
     <div class="code-snippet">
       <pre>
         int[,] arr = new int[8, 8];
-          Console.WriteLine("Pascal Triangle : ");
-          for (int i = 0; i < 5; i++)
-          {
-              for (int k = 5; k > i; k--)
-              {   
-                  Console.Write(" ");
-              }
-  
-              for (int j = 0; j < i; j++)
-              {
-                  if (j == 0 || i == j)
-                  {
-                      arr[i, j] = 1;
-                  }
-                  else
-                  {
-                      arr[i, j] = arr[i - 1, j] + arr[i - 1, j - 1];
-                  }
-                  Console.Write(arr[i, j] + " ");
-              }
-              Console.ReadLine();
-          }
+        Console.WriteLine("Pascal Triangle : ");
+        for (int i = 0; i < 5; i++)
+        {
+            for (int k = 5; k > i; k--)
+            {   
+                Console.Write(" ");
+            }
+
+            for (int j = 0; j < i; j++)
+            {
+                if (j == 0 || i == j)
+                {
+                    arr[i, j] = 1;
+                }
+                else
+                {
+                    arr[i, j] = arr[i - 1, j] + arr[i - 1, j - 1];
+                }
+                Console.Write(arr[i, j] + " ");
+            }
+            Console.ReadLine();
+        }
       </pre>
     </div>
 
@@ -230,26 +215,26 @@
     <div class="code-snippet">
       <pre>
         int array[15][15], i, j, rows, num = 25, k;
-          printf("\n Enter the number of rows:");
-          scanf("%d", &rows);
-          for (i = 0; i < rows; i++)
+        printf("\n Enter the number of rows:");
+        scanf("%d", &rows);
+        for (i = 0; i < rows; i++)
+        {
+            for (k = num - 2 * i; k >= 0; k--)
+                printf(" ");
+          for (j = 0; j <= i; j++)
           {
-              for (k = num - 2 * i; k >= 0; k--)
-                  printf(" ");
-            for (j = 0; j <= i; j++)
-            {
-                      if (j == 0 || i == j)
+            if (j == 0 || i == j)
           {
-                          array[i][j] = 1;
-                      }
-                      else
-                      {
-                          array[i][j] = array[i - 1][j - 1] + array[i - 1][j];
+                array[i][j] = 1;
+            }
+          else
+          {
+             array[i][j] = array[i - 1][j - 1] + array[i - 1][j];
           }
-          printf("%4d", array[i][j]);
-                  }
-            printf("\n");
-    }
+            printf("%4d", array[i][j]);
+          }
+          printf("\n");
+        }
       </pre>
     </div>
 
@@ -297,22 +282,22 @@
     <div class="code-snippet">
       <pre>
         int n, num = 1, c, d;
-      Scanner in = new Scanner(System.in);
-      System.out.println("Enter the number of rows of floyd's triangle you want");
-      n = in.nextInt();
-      System.out.println("Floyd's triangle :-");
-      for ( c = 1 ; c <= n ; c++ )
-      {
-         for ( d = 1 ; d <= c ; d++ )
-           {
-              System.out.print(num+" ");
-              num++;
-           }
-          System.out.println();
-      }
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the number of rows of floyd's triangle you want");
+        n = in.nextInt();
+        System.out.println("Floyd's triangle :-");
+        for ( c = 1 ; c <= n ; c++ )
+        {
+          for ( d = 1 ; d <= c ; d++ )
+            {
+                System.out.print(num+" ");
+                num++;
+            }
+            System.out.println();
+        }
       </pre>
     </div>
-    
+
     <div class="code-snippet">
       <pre>
         int n, num = 1, c = 1, d = 1;
@@ -320,7 +305,6 @@
         System.out.println("Enter the number of rows: ");
         n = in.nextInt();
         System.out.println("Floyd's triangle :-");
- 
         while(c <= n)
         {
             while(d <= c)
@@ -335,23 +319,23 @@
         }
       </pre>
     </div>
-    
+
     <div class="code-snippet">
       <pre>
         int n, num = 1, c, d;
-      Scanner in = new Scanner(System.in);
-      System.out.println("Enter the number of rows of floyd's triangle you want");
-      n = in.nextInt();
-      System.out.println("Floyd's triangle :-");
-      for ( c = 1 ; c <= n ; c++ )
-      {
-         for ( d = 1 ; d <= c ; d++ )
-           {
-              System.out.print(num+" ");
-              num++;
-           }
-          System.out.println();
-      }
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the number of rows of floyd's triangle you want");
+        n = in.nextInt();
+        System.out.println("Floyd's triangle :-");
+        for ( c = 1 ; c <= n ; c++ )
+        {
+          for ( d = 1 ; d <= c ; d++ )
+            {
+                System.out.print(num+" ");
+                num++;
+            }
+            System.out.println();
+        }
       </pre>
     </div>
 
@@ -375,7 +359,7 @@
     </div>
 
     <div class="code-snippet">
-        <pre>
+      <pre>
           int p, lastInt = 0, input;
           Console.WriteLine("Enter the Number of Rows : ");
           input = int.Parse(Console.ReadLine());
@@ -397,269 +381,6 @@
           }
           Console.ReadLine();
         </pre>
-      </div>
-
-    <div class="code-snippet">
-      <pre>
-        int[,] arr = new int[8, 8];
-          Console.WriteLine("Pascal Triangle : ");
-          for (int i = 0; i < 5; i++)
-          {
-              for (int k = 5; k > i; k--)
-              {   
-                  Console.Write(" ");
-              }
-  
-              for (int j = 0; j < i; j++)
-              {
-                  if (j == 0 || i == j)
-                  {
-                      arr[i, j] = 1;
-                  }
-                  else
-                  {
-                      arr[i, j] = arr[i - 1, j] + arr[i - 1, j - 1];
-                  }
-                  Console.Write(arr[i, j] + " ");
-              }
-              Console.ReadLine();
-          }
-      </pre>
-    </div>
-
-    <div class="code-snippet">
-      <pre>
-        int rows;
-        printf("Enter the Number of Rows in the Pascal Triangle::\t");
-        scanf("%d",&rows);
-        int arr[rows][rows];
-        //initializing the array that will form base of the pascal triangle.
-        for(int i=0;i<rows;i++)
-        {
-            for(int j=0;j<=i;j++)
-            {
-                    arr[i][j]=(factorial(i)/(factorial(i-j)*factorial(j)));
-                    //Finding the value of iCj=[i!/(i-j!)*(j!)] for each place.
-            }
-        }
-        for (int i = 0; i < rows; i++)
-        {
-            for (int k = rows -  i-1 ; k > 0; k--)
-            {
-                  //Prints spaces as many as number of rows in the triangle-current number of row
-                    printf("  ");
-            }
-            for (int j = 0; j <= i; j++)
-            {
-                printf("%-5d", arr[i][j]);
-                // %-5d means length specifier.
-                //it means 5 spaces are provided for number it fills spaces from left to right.
-            }
-            printf("\n");
-        }
-        return ;
-      </pre>
-    </div>
-
-    <div class="code-snippet">
-      <pre>
-        nCr = n!/((n-r)!*r!)
-
-      if r=0, nCr = n!n−0!∗0!=n!n!0!=1
-
-      hence nC0 = 1
-
-      if r==n, nCr = n!(n−n!)n!=n!0!∗n!=n!n!=1
-      </pre>
-    </div>
-
-    <div class="code-snippet">
-      <pre>
-                        1
-                      1    1
-                    1    2    1
-                  1    3    3    1
-                1    4    6    4    1
-              1    5    10   10   5    1
-            1    6    15   20   15   6    1
-          1    7    21   35   35   21   7    1
-        1    8    28   56   70   56   28   8    1
-      1    9    36   84   126  126  84   36   9    1
-    1    10   45   120  210  252  210  120  45   10   1
-  1    11   55   165  330  462  462  330  165  55   11   1
-      </pre>
-    </div>
-
-    <div class="code-snippet">
-      <pre>
-        int array[15][15], i, j, rows, num = 25, k;
-          printf("\n Enter the number of rows:");
-          scanf("%d", &rows);
-          for (i = 0; i < rows; i++)
-          {
-              for (k = num - 2 * i; k >= 0; k--)
-                  printf(" ");
-            for (j = 0; j <= i; j++)
-            {
-                      if (j == 0 || i == j)
-          {
-                          array[i][j] = 1;
-                      }
-                      else
-                      {
-                          array[i][j] = array[i - 1][j - 1] + array[i - 1][j];
-          }
-          printf("%4d", array[i][j]);
-                  }
-            printf("\n");
-    }
-      </pre>
-    </div>
-
-    <div class="code-snippet">
-      <pre>
-        int i, j, k = 1;
-        for (i = 1; i <= 10; i++)
-         {
-             for (j = 1; j < i + 1; j++)
-             {
-                 Console.Write(k++ + " ");
-             }
-  
-             Console.Write("\n");
-         }
-         Console.ReadLine();
-      </pre>
-    </div>
-
-    <div class="code-snippet">
-      <pre>
-        int p, lastInt = 0, input;
-        Console.WriteLine("Enter the Number of Rows : ");
-        input = int.Parse(Console.ReadLine());
-        for (int i = 1; i <= input; i++)
-        {
-            for (p = 1; p <= i; p++)
-            {
-                if (lastInt == 1)
-                {
-                    Console.Write("0");
-                    lastInt = 0;
-                }
-                else if (lastInt == 0)
-                {
-                    Console.Write("1");
-                    lastInt = 1;
-                }
-            } Console.Write("\n");
-        }
-        Console.ReadLine();
-      </pre>
-    </div>
-
-    <div class="code-snippet">
-      <pre>
-        int n, num = 1, c, d;
-      Scanner in = new Scanner(System.in);
-      System.out.println("Enter the number of rows of floyd's triangle you want");
-      n = in.nextInt();
-      System.out.println("Floyd's triangle :-");
-      for ( c = 1 ; c <= n ; c++ )
-      {
-         for ( d = 1 ; d <= c ; d++ )
-           {
-              System.out.print(num+" ");
-              num++;
-           }
-          System.out.println();
-      }
-      </pre>
-    </div>
-    
-    <div class="code-snippet">
-      <pre>
-        int n, num = 1, c = 1, d = 1;
-        Scanner in = new Scanner(System.in);
-        System.out.println("Enter the number of rows: ");
-        n = in.nextInt();
-        System.out.println("Floyd's triangle :-");
- 
-        while(c <= n)
-        {
-            while(d <= c)
-            {
-                System.out.print(num + " ");
-                num++;
-                d++;
-            }
-            System.out.println();
-            c++;
-            d = 1;
-        }
-      </pre>
-    </div>
-    
-    <div class="code-snippet">
-      <pre>
-        int n, num = 1, c, d;
-      Scanner in = new Scanner(System.in);
-      System.out.println("Enter the number of rows of floyd's triangle you want");
-      n = in.nextInt();
-      System.out.println("Floyd's triangle :-");
-      for ( c = 1 ; c <= n ; c++ )
-      {
-         for ( d = 1 ; d <= c ; d++ )
-           {
-              System.out.print(num+" ");
-              num++;
-           }
-          System.out.println();
-      }
-      </pre>
-    </div>
-    
-    <div class="code-snippet">
-      <pre>
-        int n, num = 1, c, d;
-      Scanner in = new Scanner(System.in);
-      System.out.println("Enter the number of rows of floyd's triangle you want");
-      n = in.nextInt();
-      System.out.println("Floyd's triangle :-");
-      for ( c = 1 ; c <= n ; c++ )
-      {
-         for ( d = 1 ; d <= c ; d++ )
-           {
-              System.out.print(num+" ");
-              num++;
-           }
-          System.out.println();
-      }
-      </pre>
-    </div>
-
-    <div class="code-snippet">
-      <pre>
-        int p, lastInt = 0, input;
-        Console.WriteLine("Enter the Number of Rows : ");
-        input = int.Parse(Console.ReadLine());
-        for (int i = 1; i <= input; i++)
-        {
-            for (p = 1; p <= i; p++)
-            {
-                if (lastInt == 1)
-                {
-                    Console.Write("0");
-                    lastInt = 0;
-                }
-                else if (lastInt == 0)
-                {
-                    Console.Write("1");
-                    lastInt = 1;
-                }
-            } Console.Write("\n");
-        }
-        Console.ReadLine();
-      </pre>
     </div>
 
     <div class="code-snippet">
@@ -838,7 +559,7 @@
       }
       </pre>
     </div>
-    
+
     <div class="code-snippet">
       <pre>
         int n, num = 1, c = 1, d = 1;
@@ -861,7 +582,7 @@
         }
       </pre>
     </div>
-    
+
     <div class="code-snippet">
       <pre>
         int n, num = 1, c, d;
@@ -878,6 +599,208 @@
            }
           System.out.println();
       }
+      </pre>
+    </div>
+
+    <div class="code-snippet">
+      <pre>
+        int n, num = 1, c, d;
+      Scanner in = new Scanner(System.in);
+      System.out.println("Enter the number of rows of floyd's triangle you want");
+      n = in.nextInt();
+      System.out.println("Floyd's triangle :-");
+      for ( c = 1 ; c <= n ; c++ )
+      {
+         for ( d = 1 ; d <= c ; d++ )
+           {
+              System.out.print(num+" ");
+              num++;
+           }
+          System.out.println();
+      }
+      </pre>
+    </div>
+
+    <div class="code-snippet">
+      <pre>
+        int p, lastInt = 0, input;
+        Console.WriteLine("Enter the Number of Rows : ");
+        input = int.Parse(Console.ReadLine());
+        for (int i = 1; i <= input; i++)
+        {
+            for (p = 1; p <= i; p++)
+            {
+                if (lastInt == 1)
+                {
+                    Console.Write("0");
+                    lastInt = 0;
+                }
+                else if (lastInt == 0)
+                {
+                    Console.Write("1");
+                    lastInt = 1;
+                }
+            } Console.Write("\n");
+        }
+        Console.ReadLine();
+      </pre>
+    </div>
+
+    <div class="code-snippet">
+      <pre>
+        int[,] arr = new int[8, 8];
+          Console.WriteLine("Pascal Triangle : ");
+          for (int i = 0; i < 5; i++)
+          {
+              for (int k = 5; k > i; k--)
+              {   
+                  Console.Write(" ");
+              }
+  
+              for (int j = 0; j < i; j++)
+              {
+                  if (j == 0 || i == j)
+                  {
+                      arr[i, j] = 1;
+                  }
+                  else
+                  {
+                      arr[i, j] = arr[i - 1, j] + arr[i - 1, j - 1];
+                  }
+                  Console.Write(arr[i, j] + " ");
+              }
+              Console.ReadLine();
+          }
+      </pre>
+    </div>
+
+    <div class="code-snippet">
+      <pre>
+        int rows;
+        printf("Enter the Number of Rows in the Pascal Triangle::\t");
+        scanf("%d",&rows);
+        int arr[rows][rows];
+        //initializing the array that will form base of the pascal triangle.
+        for(int i=0;i<rows;i++)
+        {
+            for(int j=0;j<=i;j++)
+            {
+                    arr[i][j]=(factorial(i)/(factorial(i-j)*factorial(j)));
+                    //Finding the value of iCj=[i!/(i-j!)*(j!)] for each place.
+            }
+        }
+        for (int i = 0; i < rows; i++)
+        {
+            for (int k = rows -  i-1 ; k > 0; k--)
+            {
+                  //Prints spaces as many as number of rows in the triangle-current number of row
+                    printf("  ");
+            }
+            for (int j = 0; j <= i; j++)
+            {
+                printf("%-5d", arr[i][j]);
+                // %-5d means length specifier.
+                //it means 5 spaces are provided for number it fills spaces from left to right.
+            }
+            printf("\n");
+        }
+        return ;
+      </pre>
+    </div>
+
+    <div class="code-snippet">
+      <pre>
+        nCr = n!/((n-r)!*r!)
+
+      if r=0, nCr = n!n−0!∗0!=n!n!0!=1
+
+      hence nC0 = 1
+
+      if r==n, nCr = n!(n−n!)n!=n!0!∗n!=n!n!=1
+      </pre>
+    </div>
+
+    <div class="code-snippet">
+      <pre>
+                        1
+                      1    1
+                    1    2    1
+                  1    3    3    1
+                1    4    6    4    1
+              1    5    10   10   5    1
+            1    6    15   20   15   6    1
+          1    7    21   35   35   21   7    1
+        1    8    28   56   70   56   28   8    1
+      1    9    36   84   126  126  84   36   9    1
+    1    10   45   120  210  252  210  120  45   10   1
+  1    11   55   165  330  462  462  330  165  55   11   1
+      </pre>
+    </div>
+
+    <div class="code-snippet">
+      <pre>
+        int array[15][15], i, j, rows, num = 25, k;
+          printf("\n Enter the number of rows:");
+          scanf("%d", &rows);
+          for (i = 0; i < rows; i++)
+          {
+              for (k = num - 2 * i; k >= 0; k--)
+                  printf(" ");
+            for (j = 0; j <= i; j++)
+            {
+                      if (j == 0 || i == j)
+          {
+                          array[i][j] = 1;
+                      }
+                      else
+                      {
+                          array[i][j] = array[i - 1][j - 1] + array[i - 1][j];
+          }
+          printf("%4d", array[i][j]);
+                  }
+            printf("\n");
+    }
+      </pre>
+    </div>
+
+    <div class="code-snippet">
+      <pre>
+        int i, j, k = 1;
+        for (i = 1; i <= 10; i++)
+         {
+             for (j = 1; j < i + 1; j++)
+             {
+                 Console.Write(k++ + " ");
+             }
+  
+             Console.Write("\n");
+         }
+         Console.ReadLine();
+      </pre>
+    </div>
+
+    <div class="code-snippet">
+      <pre>
+        int p, lastInt = 0, input;
+        Console.WriteLine("Enter the Number of Rows : ");
+        input = int.Parse(Console.ReadLine());
+        for (int i = 1; i <= input; i++)
+        {
+            for (p = 1; p <= i; p++)
+            {
+                if (lastInt == 1)
+                {
+                    Console.Write("0");
+                    lastInt = 0;
+                }
+                else if (lastInt == 0)
+                {
+                    Console.Write("1");
+                    lastInt = 1;
+                }
+            } Console.Write("\n");
+        }
+        Console.ReadLine();
       </pre>
     </div>
 
@@ -901,7 +824,68 @@
     </div>
 
     <div class="code-snippet">
-        <pre>
+      <pre>
+        int n, num = 1, c = 1, d = 1;
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the number of rows: ");
+        n = in.nextInt();
+        System.out.println("Floyd's triangle :-");
+ 
+        while(c <= n)
+        {
+            while(d <= c)
+            {
+                System.out.print(num + " ");
+                num++;
+                d++;
+            }
+            System.out.println();
+            c++;
+            d = 1;
+        }
+      </pre>
+    </div>
+
+    <div class="code-snippet">
+      <pre>
+        int n, num = 1, c, d;
+      Scanner in = new Scanner(System.in);
+      System.out.println("Enter the number of rows of floyd's triangle you want");
+      n = in.nextInt();
+      System.out.println("Floyd's triangle :-");
+      for ( c = 1 ; c <= n ; c++ )
+      {
+         for ( d = 1 ; d <= c ; d++ )
+           {
+              System.out.print(num+" ");
+              num++;
+           }
+          System.out.println();
+      }
+      </pre>
+    </div>
+
+    <div class="code-snippet">
+      <pre>
+        int n, num = 1, c, d;
+      Scanner in = new Scanner(System.in);
+      System.out.println("Enter the number of rows of floyd's triangle you want");
+      n = in.nextInt();
+      System.out.println("Floyd's triangle :-");
+      for ( c = 1 ; c <= n ; c++ )
+      {
+         for ( d = 1 ; d <= c ; d++ )
+           {
+              System.out.print(num+" ");
+              num++;
+           }
+          System.out.println();
+      }
+      </pre>
+    </div>
+
+    <div class="code-snippet">
+      <pre>
           int p, lastInt = 0, input;
           Console.WriteLine("Enter the Number of Rows : ");
           input = int.Parse(Console.ReadLine());
@@ -923,7 +907,7 @@
           }
           Console.ReadLine();
         </pre>
-      </div>
+    </div>
 
     <div class="code-snippet">
       <pre>
@@ -1101,7 +1085,7 @@
       }
       </pre>
     </div>
-    
+
     <div class="code-snippet">
       <pre>
         int n, num = 1, c = 1, d = 1;
@@ -1124,26 +1108,7 @@
         }
       </pre>
     </div>
-    
-    <div class="code-snippet">
-      <pre>
-        int n, num = 1, c, d;
-      Scanner in = new Scanner(System.in);
-      System.out.println("Enter the number of rows of floyd's triangle you want");
-      n = in.nextInt();
-      System.out.println("Floyd's triangle :-");
-      for ( c = 1 ; c <= n ; c++ )
-      {
-         for ( d = 1 ; d <= c ; d++ )
-           {
-              System.out.print(num+" ");
-              num++;
-           }
-          System.out.println();
-      }
-      </pre>
-    </div>
-    
+
     <div class="code-snippet">
       <pre>
         int n, num = 1, c, d;
@@ -1163,7 +1128,26 @@
       </pre>
     </div>
 
-  </div> 
+    <div class="code-snippet">
+      <pre>
+        int n, num = 1, c, d;
+      Scanner in = new Scanner(System.in);
+      System.out.println("Enter the number of rows of floyd's triangle you want");
+      n = in.nextInt();
+      System.out.println("Floyd's triangle :-");
+      for ( c = 1 ; c <= n ; c++ )
+      {
+         for ( d = 1 ; d <= c ; d++ )
+           {
+              System.out.print(num+" ");
+              num++;
+           }
+          System.out.println();
+      }
+      </pre>
+    </div>
+
+  </div>
 
   <!-- ======= Video Background ======= -->
   <!-- <video autoplay muted loop id="bgVideo">
@@ -1403,8 +1387,13 @@
             <ol style="text-align:justify;">
               <li>Contribute to the development team for the OnTrack Health and Learning Management System project built
                 on .NET Core.</li>
+              <li>Contributed to the development of Scopemedtech project, an AI-driven platform built using the OpenAI
+                API.</li>
+              <li>Developed and enhanced Rawdah Express by implementing secure online payment workflows using Stripe
+                APIs, enabling seamless checkout and reliable transaction processing.</li>
               <li>Engage in full-stack development, ensuring the delivery of high-quality software products.</li>
-              <li>Implement automated testing frameworks using Appium, BrowserStack, Leapwork, Playwright, and Protractor for UI and end-to-end testing.</li>
+              <li>Implement automated testing frameworks using Appium, BrowserStack, Leapwork, Playwright, and
+                Protractor for UI and end-to-end testing.</li>
               <li>Collaborate closely with senior engineers and cross-functional teams.</li>
               <li>Design, develop, and deploy new features.</li>
               <li>Adhere to best practices and coding standards throughout the development process.</li>
@@ -1416,9 +1405,13 @@
 
             <p style="text-align:left;">Key Achievements:</p>
             <ol style="text-align:justify;">
-              <li>Successfully enhanced functionality and user experience of the OnTrack Health and Learning Management
-                System project.</li>
-              <li>Reduced manual testing efforts by 60% and improved test coverage through automated testing solutions, including Leapwork, Postman, Playwright, and Protractor.</li>
+              <li>Successfully enhanced functionality and user experience of the OnTrack Health, Learning Management and
+                Scopemedtech
+                System projects.</li>
+              <li>Successfully delivered the Rawdah Express project within 1 week, including full Stripe payment gateway
+                integration.</li>
+              <li>Reduced manual testing efforts by 60% and improved test coverage through automated testing solutions,
+                including Leapwork, Postman, Playwright, and Protractor.</li>
               <li>Provided valuable feedback in code reviews, ensuring code quality and consistency.</li>
               <li>Improved application stability and performance by identifying and resolving critical issues with the
                 QA team.</li>
@@ -1558,9 +1551,55 @@
 
       <div class="row portfolio-container">
 
+        <div class="col-lg-4 col-md-6 portfolio-item filter-project filter-app">
+          <center>
+            <h4>Rawdah Express</h4>
+          </center>
+          <div class="portfolio-wrap">
+            <img src="assets/img/project/rawdahexpress.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
 
+              <div class="portfolio-links">
+                <a href="projects/rawdahexpress.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe"
+                  class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
 
-         <div class="col-lg-4 col-md-6 portfolio-item filter-project filter-app">
+        <div class="col-lg-4 col-md-6 portfolio-item filter-project filter-app">
+          <center>
+            <h4>Scopemedtech</h4>
+          </center>
+          <div class="portfolio-wrap">
+            <img src="assets/img/project/scopemedtech.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+
+              <div class="portfolio-links">
+                <a href="projects/scopemedtech.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe"
+                  class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-project filter-app">
+          <center>
+            <h4>Ontrack Health - LMS</h4>
+          </center>
+          <div class="portfolio-wrap">
+            <img src="assets/img/project/ontrackhealth.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+
+              <div class="portfolio-links">
+                <a href="projects/ontrackhealth.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe"
+                  class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-project filter-app">
           <center>
             <h4>Expense Tracker-MAUI</h4>
           </center>
