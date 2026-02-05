@@ -1,8 +1,8 @@
-!(function($) {
+!(function ($) {
   "use strict";
 
   // Nav Menu
-  $(document).on('click', '.nav-menu a, .mobile-nav a', function(e) {
+  $(document).on('click', '.nav-menu a, .mobile-nav a', function (e) {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var hash = this.hash;
       var target = $(hash);
@@ -22,7 +22,7 @@
 
         if (!$('#header').hasClass('header-top')) {
           $('#header').addClass('header-top');
-          setTimeout(function() {
+          setTimeout(function () {
             $("section").removeClass('section-show');
             $(hash).addClass('section-show');
           }, 350);
@@ -50,7 +50,7 @@
       $('#header').addClass('header-top');
       $('.nav-menu .active, .mobile-nav .active').removeClass('active');
       $('.nav-menu, .mobile-nav').find('a[href="' + initial_nav + '"]').parent('li').addClass('active');
-      setTimeout(function() {
+      setTimeout(function () {
         $("section").removeClass('section-show');
         $(initial_nav).addClass('section-show');
       }, 350);
@@ -66,13 +66,13 @@
     $('body').prepend('<button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button>');
     $('body').append('<div class="mobile-nav-overly"></div>');
 
-    $(document).on('click', '.mobile-nav-toggle', function(e) {
+    $(document).on('click', '.mobile-nav-toggle', function (e) {
       $('body').toggleClass('mobile-nav-active');
       $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
       $('.mobile-nav-overly').toggle();
     });
 
-    $(document).click(function(e) {
+    $(document).click(function (e) {
       var container = $(".mobile-nav, .mobile-nav-toggle");
       if (!container.is(e.target) && container.has(e.target).length === 0) {
         if ($('body').hasClass('mobile-nav-active')) {
@@ -93,8 +93,8 @@
   });
 
   // Skills section
-  $('.skills-content').waypoint(function() {
-    $('.progress .progress-bar').each(function() {
+  $('.skills-content').waypoint(function () {
+    $('.progress .progress-bar').each(function () {
       $(this).css("width", $(this).attr("aria-valuenow") + '%');
     });
   }, {
@@ -120,13 +120,13 @@
   });
 
   // Porfolio isotope and filter
-  $(window).on('load', function() {
+  $(window).on('load', function () {
     var portfolioIsotope = $('.portfolio-container').isotope({
       itemSelector: '.portfolio-item',
       layoutMode: 'fitRows'
     });
 
-    $('#portfolio-flters li').on('click', function() {
+    $('#portfolio-flters li').on('click', function () {
       $("#portfolio-flters li").removeClass('filter-active');
       $(this).addClass('filter-active');
 
@@ -135,10 +135,35 @@
       });
     });
 
+    $(".portfolio-wrap").on("click", function (e) {
+      e.stopPropagation();
+      e.preventDefault();
+      const imgSrc = $(this).find(".img-fluid").attr("src");
+      if (!imgSrc) return;
+      $("#modalImage").attr("src", imgSrc);
+      $("#imageModal").addClass("active");
+    })
+
+    $(".project-btn, .portfolio-links a").on("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    });
+
+    $(".img-close, #imageModal").on("click", function () {
+      $("#imageModal").removeClass("active");
+    });
+
+    $(".img-modal-content").on("click", function (e) {
+      e.stopPropagation();
+    });
+    $(document).on("keydown", function (e) {
+      if (e.key === "Escape") {
+        $("#imageModal").fadeOut().removeClass("active");
+      }
+    });
   });
 
-  // Initiate venobox (lightbox feature used in portofilo)
-  $(document).ready(function() {
+  $(document).ready(function () {
     $('.venobox').venobox();
   });
 
@@ -149,43 +174,43 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   function getRandomValue(min, max) {
-      return Math.random() * (max - min) + min;
+    return Math.random() * (max - min) + min;
   }
 
   function getRandomColor() {
-      const r = Math.floor(getRandomValue(0, 255));
-      const g = Math.floor(getRandomValue(0, 255));
-      const b = Math.floor(getRandomValue(0, 255));
-      return `rgb(${r}, ${g}, ${b})`;
+    const r = Math.floor(getRandomValue(0, 255));
+    const g = Math.floor(getRandomValue(0, 255));
+    const b = Math.floor(getRandomValue(0, 255));
+    return `rgb(${r}, ${g}, ${b})`;
   }
 
   document.querySelectorAll('.code-snippet').forEach(snippet => {
-      const viewportWidth = window.innerWidth;
-      const viewportHeight = window.innerHeight;
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
 
-      let fontSizeMin = 12;
-      let fontSizeMax = 20;
+    let fontSizeMin = 12;
+    let fontSizeMax = 20;
 
-      if (viewportWidth < 768) { // Adjust font size range for mobile
-          fontSizeMin = 8;
-          fontSizeMax = 14;
-      }
+    if (viewportWidth < 768) { // Adjust font size range for mobile
+      fontSizeMin = 8;
+      fontSizeMax = 14;
+    }
 
-      const randomTranslateX = `${getRandomValue(-viewportWidth, viewportWidth)}px`;
-      const randomTranslateY = `${getRandomValue(-viewportHeight, viewportHeight)}px`;
-      const randomRotate = `${getRandomValue(-360, 360)}deg`;
-      const randomFontSize = `${getRandomValue(fontSizeMin, fontSizeMax)}px`; // Random font size
-      const randomColor = getRandomColor(); // Generate random text color
+    const randomTranslateX = `${getRandomValue(-viewportWidth, viewportWidth)}px`;
+    const randomTranslateY = `${getRandomValue(-viewportHeight, viewportHeight)}px`;
+    const randomRotate = `${getRandomValue(-360, 360)}deg`;
+    const randomFontSize = `${getRandomValue(fontSizeMin, fontSizeMax)}px`; // Random font size
+    const randomColor = getRandomColor(); // Generate random text color
 
-      snippet.style.setProperty('--translateX', randomTranslateX);
-      snippet.style.setProperty('--translateY', randomTranslateY);
-      snippet.style.setProperty('--rotateDeg', randomRotate);
-      snippet.style.fontSize = randomFontSize;
-      snippet.style.color = randomColor;
+    snippet.style.setProperty('--translateX', randomTranslateX);
+    snippet.style.setProperty('--translateY', randomTranslateY);
+    snippet.style.setProperty('--rotateDeg', randomRotate);
+    snippet.style.fontSize = randomFontSize;
+    snippet.style.color = randomColor;
 
-      // Position the snippet at a random starting position within the viewport
-      snippet.style.left = `${getRandomValue(0, viewportWidth)}px`;
-      snippet.style.top = `${getRandomValue(0, viewportHeight)}px`;
+    // Position the snippet at a random starting position within the viewport
+    snippet.style.left = `${getRandomValue(0, viewportWidth)}px`;
+    snippet.style.top = `${getRandomValue(0, viewportHeight)}px`;
   });
 });
 
