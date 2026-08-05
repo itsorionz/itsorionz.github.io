@@ -413,8 +413,10 @@ h1, h2, h3, h4, h5, h6 {
   transition: ease-in-out 0s;
   position: relative;
   height: 100vh;
+  height: 100dvh;
   display: flex;
   align-items: center;
+  align-items: safe center;
   z-index: 997;
   overflow-y: auto;
 }
@@ -1643,5 +1645,160 @@ section .container {
     width: 40px;
     height: 55px;
     font-size: 38px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Responsive (Phone / Tablet / Desktop)
+--------------------------------------------------------------*/
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style: none;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#header {
+  height: 100vh;
+  height: 100dvh;
+}
+
+#header.header-top {
+  min-height: 70px;
+  height: 70px;
+}
+
+@media (max-width: 768px) {
+  #header.header-top {
+    min-height: 60px;
+    height: 60px;
+  }
+}
+
+body::before {
+  height: 100vh;
+  height: 100dvh;
+}
+
+.portfolio .portfolio-wrap img {
+  width: 100%;
+  height: auto;
+}
+
+.services .education-card {
+  padding: 15px;
+  margin: 10px 0;
+  width: 100%;
+}
+
+@media (max-width: 991.98px) {
+  #header .proimage {
+    text-align: center;
+    padding: 0 15px !important;
+  }
+
+  #header .proImg {
+    max-width: 240px;
+    margin: 0 auto 20px;
+    display: block;
+  }
+
+  .portfolio .portfolio-item {
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #header h1 {
+    font-size: 34px;
+  }
+
+  #header h2 {
+    font-size: 20px;
+  }
+
+  .nav-menu ul {
+    flex-wrap: wrap;
+  }
+
+  .nav-menu li+li {
+    margin-left: 18px;
+  }
+
+  .nav-menu a {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  section .container {
+    padding: 20px 15px;
+  }
+
+  .section-title p {
+    font-size: 24px;
+    margin: -8px 0 12px 0;
+  }
+
+  .section-title h2::after {
+    width: 50px;
+  }
+
+  .services .icon-box {
+    padding: 25px 18px;
+    margin: 8px 0;
+  }
+
+  .services .icon-box img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .contact .php-email-form {
+    padding: 20px 15px;
+  }
+
+  .portfolio #portfolio-flters li {
+    padding: 7px 12px;
+    font-size: 12px;
+    margin: 0 2px 8px 2px;
+  }
+
+  #header .container {
+    padding: 40px 15px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #header h1 {
+    font-size: 24px;
+  }
+
+  #header h2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  #header .proImg {
+    max-width: 180px;
+  }
+
+  #header .social-links {
+    margin-top: 15px;
+  }
+
+  .about-me .content h3 {
+    font-size: 22px;
+  }
+
+  .resume .resume-title {
+    font-size: 22px;
   }
 }
