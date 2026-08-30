@@ -404,13 +404,17 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(9, 32, 58, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.02);
   color: #fff;
   line-height: 1;
   margin-right: 8px;
   border-radius: 50%;
   width: 40px;
   height: 40px;
+  transition: all 0.3s ease;
 }
 
 #header .social-links a:hover {
@@ -521,13 +525,15 @@ h1, h2, h3, h4, h5, h6 {
   left: 15px;
   z-index: 9999;
   overflow-y: auto;
-  background: rgba(0, 0, 0, 0.7);
-  transition: ease-in-out 0s;
+  background: rgba(9, 32, 58, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
   opacity: 0;
   visibility: hidden;
   border-radius: 10px;
   padding: 10px 0;
-  border: 2px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.02);
 }
 
 .mobile-nav * {
@@ -559,10 +565,12 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   position: fixed;
-  background: rgba(9, 9, 9, 0.6);
+  background: rgba(1, 14, 27, 0.6);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   overflow: hidden;
   display: none;
-  transition: ease-in-out 0s;
+  transition: all 0.3s ease;
 }
 
 .mobile-nav-active {
@@ -585,7 +593,10 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   top: 0;
   right: 0;
-  background: #09203a;
+  background: rgba(9, 32, 58, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
 }
 
 #header.header-top .social-links,
@@ -731,7 +742,11 @@ section .container {
   width: 100%;
   position: relative;
   text-align: center;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(9, 32, 58, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
 }
 
 .counts .count-box i {
@@ -802,8 +817,12 @@ section .container {
   display: flex;
   align-items: center;
   padding: 20px;
-  background: #09203a;
-  transition: ease-in-out 0.3s;
+  background: rgba(9, 32, 58, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  transition: all 0.3s ease;
 }
 
 
@@ -823,7 +842,9 @@ section .container {
 }
 
 .interests .icon-box:hover {
-  background: #042b56eb;
+  background: rgba(12, 42, 74, 0.7);
+  border-color: rgba(18, 214, 64, 0.25);
+  transform: translateY(-2px);
 }
 
 /*--------------------------------------------------------------
@@ -977,10 +998,14 @@ section .container {
 --------------------------------------------------------------*/
 .services .icon-box {
   text-align: center;
-  background: #09203a;
+  background: rgba(9, 32, 58, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
   padding: 40px 40px;
-  transition: all ease-in-out 0.3s;
-  margin: 10px
+  transition: all 0.3s ease;
+  margin: 10px;
 }
 
 .services .icon-box .icon {
@@ -1032,8 +1057,9 @@ section .container {
 }
 
 .services .icon-box:hover {
-  background: #042e5f;
-  border-color: #1c7d32;
+  background: rgba(12, 42, 74, 0.7);
+  border-color: rgba(18, 214, 64, 0.25);
+  transform: translateY(-2px);
 }
 
 .services .icon-box:hover .icon {
@@ -1078,9 +1104,12 @@ section .container {
   line-height: 1;
   text-transform: uppercase;
   color: #fff;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(9, 32, 58, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.02);
   margin: 0 3px 10px 3px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease;
   border-radius: 4px;
 }
 
@@ -1098,12 +1127,18 @@ section .container {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(9, 32, 58, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
 }
 
 .portfolio .portfolio-wrap::before {
   content: "";
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(1, 14, 27, 0.6);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   position: absolute;
   left: 30px;
   right: 30px;
@@ -1240,11 +1275,13 @@ section .container {
 }
 
 .contact-card {
-  background: #09203a;
+  background: rgba(9, 32, 58, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.02);
   border-radius: 12px;
   padding: 28px 20px;
   text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.06);
   transition: all 0.3s ease;
   text-decoration: none;
   display: flex;
@@ -1258,8 +1295,8 @@ a.contact-card {
 }
 
 a.contact-card:hover {
-  background: #0c2a4a;
-  border-color: rgba(18, 214, 64, 0.3);
+  background: rgba(12, 42, 74, 0.7);
+  border-color: rgba(18, 214, 64, 0.25);
   transform: translateY(-4px);
   text-decoration: none;
   color: inherit;
@@ -1270,6 +1307,9 @@ a.contact-card:hover {
   height: 56px;
   border-radius: 50%;
   background: rgba(18, 214, 64, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(18, 214, 64, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1339,9 +1379,11 @@ a.contact-card:hover .contact-card-icon i {
 .contact-social {
   text-align: center;
   padding: 24px;
-  background: #09203a;
+  background: rgba(9, 32, 58, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.02);
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .contact-social h4 {
@@ -1362,14 +1404,16 @@ a.contact-card:hover .contact-card-icon i {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(9, 32, 58, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.02);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
   font-size: 20px;
   transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .contact-social-links a:hover {
@@ -1452,7 +1496,7 @@ a.contact-card:hover .contact-card-icon i {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
   border: 0;
   transition: 0.3s;
   color: #fff;
@@ -1559,9 +1603,10 @@ a.contact-card:hover .contact-card-icon i {
 #imageModal {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(1, 14, 27, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   z-index: 9999;
-  backdrop-filter: blur(6px);
   display: flex;
 
   opacity: 0;
@@ -1612,12 +1657,15 @@ a.contact-card:hover .contact-card-icon i {
   font-size: 50px;
   line-height: 1;
   color: #fff;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(9, 32, 58, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.02);
   border-radius: 8px;
   cursor: pointer;
   z-index: 10;
   user-select: none;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .img-nav:hover {
@@ -1733,6 +1781,18 @@ body::before {
   padding: 15px;
   margin: 10px 0;
   width: 100%;
+  background: rgba(9, 32, 58, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.services .education-card:hover {
+  background: rgba(12, 42, 74, 0.7);
+  border-color: rgba(18, 214, 64, 0.25);
+  transform: translateY(-2px);
 }
 
 @media (max-width: 991.98px) {
@@ -2131,16 +2191,18 @@ body::before {
 }
 
 .skill-category {
-  background: #09203a;
+  background: rgba(9, 32, 58, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.02);
   border-radius: 12px;
   padding: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
   transition: all 0.3s ease;
 }
 
 .skill-category:hover {
-  background: #0c2a4a;
-  border-color: rgba(18, 214, 64, 0.2);
+  background: rgba(12, 42, 74, 0.7);
+  border-color: rgba(18, 214, 64, 0.25);
   transform: translateY(-2px);
 }
 
@@ -2176,11 +2238,13 @@ body::before {
   gap: 6px;
   padding: 8px 14px;
   background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-radius: 8px;
   font-size: 13px;
   font-weight: 500;
   color: #ccc;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.02);
   transition: all 0.3s ease;
   cursor: default;
 }
@@ -2204,7 +2268,9 @@ body::before {
 
 .skill-tag.ai-tag {
   background: rgba(18, 214, 64, 0.08);
-  border-color: rgba(18, 214, 64, 0.15);
+  border: 1px solid rgba(18, 214, 64, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .skill-tag.ai-tag:hover {
