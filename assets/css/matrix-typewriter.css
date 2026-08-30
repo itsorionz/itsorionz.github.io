@@ -57,4 +57,18 @@
   .typewriter-line {
     font-size: 10px;
   }
+
+  #matrix-canvas {
+    opacity: 0.2;
+  }
+}
+
+@media (max-width: 576px) {
+  .typewriter-line {
+    font-size: 8px;
+  }
+
+  #matrix-canvas {
+    opacity: 0.15;
+  }
 }

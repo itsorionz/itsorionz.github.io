@@ -1564,7 +1564,7 @@ section .container {
   }
 }
 
-@media (min-width: 992px) and (max-width: 1200px) {}
+@media (min-width: 992px) and (max-width: 1199.98px) {}
 
 @media (min-width: 1200px) {}
 
@@ -1736,5 +1736,307 @@ body::before {
 
   .resume .resume-title {
     font-size: 22px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Full Device Responsive
+--------------------------------------------------------------*/
+/* Extra Small Devices (portrait phones, < 576px) */
+@media (max-width: 575.98px) {
+  #header .proimage {
+    padding: 0 15px !important;
+  }
+
+  #header .proImg {
+    max-width: 150px;
+    margin-bottom: 15px;
+  }
+
+  #header h1 {
+    font-size: 22px;
+  }
+
+  #header h2 {
+    font-size: 14px;
+  }
+
+  #header .social-links a {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+    margin-right: 6px;
+  }
+
+  .nav-menu a {
+    font-size: 14px;
+  }
+
+  .services .icon-box {
+    padding: 20px 15px;
+    margin: 8px 0;
+  }
+
+  .services .icon-box h4 {
+    font-size: 18px;
+  }
+
+  .services .icon-box p {
+    font-size: 13px;
+  }
+
+  .portfolio .portfolio-wrap .portfolio-info::before,
+  .portfolio .portfolio-wrap .portfolio-info::after {
+    width: 30px;
+    height: 30px;
+  }
+
+  .portfolio .portfolio-wrap .portfolio-info::before {
+    top: 15px;
+    left: 15px;
+  }
+
+  .portfolio .portfolio-wrap .portfolio-info::after {
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .contact .info-box h3 {
+    font-size: 16px;
+    margin: 10px 0 8px 58px;
+  }
+
+  .contact .info-box p {
+    font-size: 13px;
+    margin: 0 0 0 58px;
+  }
+
+  .contact .info-box .social-links {
+    margin: 5px 0 0 58px;
+  }
+
+  .contact .info-box i.bx {
+    padding: 10px;
+  }
+
+  .contact .info-box {
+    padding: 15px;
+  }
+
+  .education-card img {
+    max-height: 150px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .education-card p,
+  .education-card h5,
+  .education-card h6 {
+    font-size: 13px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .education-card ul {
+    padding-left: 15px;
+    font-size: 12px;
+  }
+
+  .section-title h2 {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .section-title h2::after {
+    width: 60px;
+  }
+
+  section .container {
+    padding: 15px 10px;
+  }
+
+  .interests .icon-box {
+    padding: 15px;
+  }
+
+  .interests .icon-box i {
+    font-size: 24px;
+  }
+
+  .interests .icon-box h3 {
+    font-size: 13px;
+  }
+
+  .experience ul {
+    font-size: 13px;
+  }
+
+  .experience h4 {
+    font-size: 16px;
+  }
+
+  .experience h5 {
+    font-size: 14px;
+  }
+}
+
+/* Small Devices (landscape phones, 576px - 767.98px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #header .proimage {
+    padding: 0 20px !important;
+  }
+
+  #header .proImg {
+    max-width: 180px;
+  }
+
+  #header h1 {
+    font-size: 26px;
+  }
+
+  #header h2 {
+    font-size: 18px;
+  }
+
+  #header .social-links a {
+    width: 38px;
+    height: 38px;
+    font-size: 15px;
+  }
+
+  .services .icon-box {
+    padding: 25px 20px;
+    margin: 8px 0;
+  }
+
+  .portfolio .portfolio-wrap .portfolio-info::before,
+  .portfolio .portfolio-wrap .portfolio-info::after {
+    width: 35px;
+    height: 35px;
+  }
+
+  .contact .info-box h3 {
+    font-size: 18px;
+    margin: 10px 0 8px 62px;
+  }
+
+  .contact .info-box p {
+    margin: 0 0 0 62px;
+  }
+
+  .contact .info-box .social-links {
+    margin: 5px 0 0 62px;
+  }
+
+  .education-card img {
+    max-height: 180px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .interests .icon-box h3 {
+    font-size: 14px;
+  }
+}
+
+/* Medium Devices (tablets, 768px - 991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #header .proImg {
+    max-width: 200px;
+  }
+
+  #header h1 {
+    font-size: 30px;
+  }
+
+  #header h2 {
+    font-size: 20px;
+  }
+
+  .nav-menu a {
+    font-size: 16px;
+  }
+
+  .nav-menu li+li {
+    margin-left: 20px;
+  }
+
+  .services .icon-box {
+    padding: 30px 25px;
+  }
+
+  .portfolio .portfolio-wrap .portfolio-info::before,
+  .portfolio .portfolio-wrap .portfolio-info::after {
+    width: 40px;
+    height: 40px;
+  }
+
+  .education-card img {
+    max-height: 200px;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+/* Large Devices (desktops, 992px - 1199.98px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #header h1 {
+    font-size: 34px;
+  }
+
+  #header h2 {
+    font-size: 20px;
+  }
+
+  .nav-menu ul {
+    flex-wrap: wrap;
+  }
+
+  .nav-menu li+li {
+    margin-left: 18px;
+  }
+
+  .nav-menu a {
+    font-size: 15px;
+  }
+
+  .education-card img {
+    max-height: 220px;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+/* Skills images responsive */
+@media (max-width: 767.98px) {
+  .services .icon-box img {
+    max-width: 80px;
+    height: auto;
+    margin: 3px;
+  }
+}
+
+/* Portfolio filters mobile */
+@media (max-width: 575.98px) {
+  .portfolio #portfolio-flters {
+    padding: 2px 8px;
+  }
+
+  .portfolio #portfolio-flters li {
+    padding: 5px 10px;
+    font-size: 11px;
+    margin: 0 2px 6px 2px;
+  }
+}
+
+/* Contact section responsive */
+@media (max-width: 767.98px) {
+  .contact .info-box {
+    margin-bottom: 15px;
+  }
+
+  .contact .info-box i.bx {
+    font-size: 20px;
+    padding: 12px;
   }
 }
