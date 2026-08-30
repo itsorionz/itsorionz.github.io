@@ -1,0 +1,60 @@
+/* Matrix Rain Canvas */
+#matrix-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* Typewriter Container */
+#typewriter-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.typewriter-line {
+  position: absolute;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  color: #12d640;
+  opacity: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #12d640;
+  width: 0;
+}
+
+.typewriter-line.typing {
+  opacity: 0.45;
+  animation: typewriter-typing 4s steps(60) forwards;
+}
+
+.typewriter-line.fading {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+@keyframes typewriter-typing {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+@keyframes blink-caret {
+  50% { border-color: transparent; }
+}
+
+@media (max-width: 768px) {
+  .typewriter-line {
+    font-size: 10px;
+  }
+}
