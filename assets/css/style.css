@@ -2007,12 +2007,134 @@ body::before {
   }
 }
 
-/* Skills images responsive */
-@media (max-width: 767.98px) {
-  .services .icon-box img {
-    max-width: 80px;
-    height: auto;
-    margin: 3px;
+/*--------------------------------------------------------------
+# Skills Grid
+--------------------------------------------------------------*/
+.skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skill-category {
+  background: #09203a;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.3s ease;
+}
+
+.skill-category:hover {
+  background: #0c2a4a;
+  border-color: rgba(18, 214, 64, 0.2);
+  transform: translateY(-2px);
+}
+
+.skill-category-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.skill-category-header i {
+  font-size: 22px;
+  color: #12d640;
+}
+
+.skill-category-header h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #dee2e6;
+  font-family: "Poppins", sans-serif;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #ccc;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.skill-tag img {
+  height: 18px;
+  width: auto;
+  object-fit: contain;
+}
+
+.skill-tag i {
+  font-size: 16px;
+  color: #12d640;
+}
+
+.skill-tag:hover {
+  background: rgba(18, 214, 64, 0.1);
+  border-color: rgba(18, 214, 64, 0.3);
+  color: #fff;
+}
+
+.skill-tag.ai-tag {
+  background: rgba(18, 214, 64, 0.08);
+  border-color: rgba(18, 214, 64, 0.15);
+}
+
+.skill-tag.ai-tag:hover {
+  background: rgba(18, 214, 64, 0.18);
+  border-color: rgba(18, 214, 64, 0.4);
+}
+
+/* Skills Responsive */
+@media (max-width: 575.98px) {
+  .skill-category {
+    padding: 16px;
+  }
+
+  .skill-category-header i {
+    font-size: 18px;
+  }
+
+  .skill-category-header h4 {
+    font-size: 14px;
+  }
+
+  .skill-tag {
+    padding: 6px 10px;
+    font-size: 12px;
+    gap: 4px;
+  }
+
+  .skill-tag img {
+    height: 14px;
+  }
+
+  .skill-tag i {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .skill-tag {
+    padding: 7px 12px;
+    font-size: 12px;
+  }
+
+  .skill-tag img {
+    height: 16px;
   }
 }
 
