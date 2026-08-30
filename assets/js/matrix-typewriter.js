@@ -38,6 +38,10 @@
 // Typewriter Effect
 (function() {
   const codeSnippets = [
+    // Developer Credit
+    '// Developed by Anamul Haque Sohel | Full-Stack .NET Developer',
+    '// Anamul Haque Sohel | Software Engineer | AI/ML Enthusiast',
+    '// Portfolio: itsorionz.github.io | GitHub: github.com/itsorionz',
     // C# / .NET
     '[ApiController] [Route("api/[controller]")] public class TestController : ControllerBase',
     'public class Repository<T> : IRepository<T> where T : class { private readonly AppDbContext _context; }',
@@ -55,6 +59,25 @@
     'public async Task<string> GenerateTestsAsync(string issue) { var chat = new ChatHistory("You are a Playwright test generator"); }',
     '[HttpPost("generate")] public async Task<IActionResult> GenerateTests([FromBody] IssueDto issue)',
     'private readonly DbSet<T> _dbSet; public async Task<IEnumerable<T>> GetAllAsync() { return await _dbSet.ToListAsync(); }',
+    'public record Developer(string Name, string Role, string[] Skills);',
+    'var dev = new Developer("Anamul Haque Sohel", "Software Engineer", new[] { ".NET", "React", "Python" });',
+    '[MaxLength(100)] [Required] public string FullName { get; set; } = string.Empty;',
+    'await context.Users.Where(u => u.IsActive).Select(u => new UserDto { Id = u.Id }).ToListAsync();',
+    'var handler = new JwtSecurityTokenHandler(); var token = handler.CreateToken(descriptor);',
+    'builder.Services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo { Title = "API" }); });',
+    '[Authorize(Roles = "Admin")] [HttpDelete("{id}")] public async Task<IActionResult> Delete(int id)',
+    'IAsyncEnumerable<Score> GetScoresAsync() { await foreach (var s in scores) yield return s; }',
+    // C++
+    '#include <iostream>; using namespace std; int main() { cout << "Hello World" << endl; }',
+    'template <typename T> T findMax(T a, T b) { return (a > b) ? a : b; }',
+    'class Node { public: int data; Node* next; Node(int val) : data(val), next(nullptr) {} };',
+    'vector<int> mergeSort(vector<int>& arr) { if (arr.size() <= 1) return arr; int mid = arr.size() / 2; }',
+    'auto future = std::async(std::launch::async, [&]() { return compute(data); });',
+    'std::shared_ptr<Socket> sock = std::make_shared<Socket>(endpoint);',
+    'unique_ptr<Matrix> result = make_unique<Matrix>(Matrix::multiply(a, b));',
+    'void ThreadPool::worker() { while (auto task = queue.pop()) { task->execute(); } }',
+    'unordered_map<string, vector<int>> graph; graph["A"].push_back("B");',
+    'cv::Mat img = cv::imread("image.jpg"); cv::cvtColor(img, img, cv::COLOR_BGR2GRAY);',
     // Python / AI
     'client = OpenAI(api_key=os.getenv("OPENAI_API_KEY")); response = client.chat.completions.create(model="gpt-4")',
     'import anthropic; client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))',
@@ -82,6 +105,14 @@
     'def generate_with_claude(prompt): response = client.messages.create(model="claude-sonnet-4-20250514", max_tokens=4096)',
     'def generate_with_gemini(prompt): response = model.generate_content(prompt); return response.text',
     'def generate_with_ollama(prompt, model="llama3"): response = ollama.chat(model=model, messages=[...])',
+    'from dataclasses import dataclass; @dataclass class Profile: name: str; role: str; skills: list',
+    'import asyncio; async def fetch_data(url): async with aiohttp.ClientSession() as session: return await session.get(url)',
+    'from pydantic import BaseModel, Field; class Developer(BaseModel): name: str = Field(..., min_length=1)',
+    'from functools import lru_cache; @lru_cache(maxsize=128) def fibonacci(n): return n if n < 2 else fibonacci(n-1) + fibonacci(n-2)',
+    'import redis; r = redis.Redis(host="localhost", port=6379); r.set("developer", "Anamul Haque Sohel")',
+    'from contextlib import contextmanager; @contextmanager def managed_resource(): yield resource; resource.cleanup()',
+    'from typing import AsyncGenerator; async def stream_results() -> AsyncGenerator[dict, None]: yield {"status": "ok"}',
+    'from pathlib import Path; config = Path("config.yaml"); data = yaml.safe_load(config.read_text())',
     // TypeScript
     "import { test, expect } from '@playwright/test'; test('should login', async ({ page }) => {",
     "await page.goto('/login'); await page.fill('#email', 'test@example.com'); await page.click('button')",
