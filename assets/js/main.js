@@ -303,3 +303,24 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Training Topics Toggle
+$(document).on('click', '.btn-show-topics, .training-card-btn', function() {
+  var card = $(this).closest('.education-card, .contact-card');
+  var topics = card.find('.training-topics, .training-card-topics');
+  if (topics.is(':visible')) {
+    topics.slideUp(200);
+    if ($(this).hasClass('btn-show-topics')) {
+      $(this).text($(this).text().replace('- ', '+ '));
+    } else {
+      $(this).text('+ Topics');
+    }
+  } else {
+    topics.slideDown(200);
+    if ($(this).hasClass('btn-show-topics')) {
+      $(this).text($(this).text().replace('+ ', '- '));
+    } else {
+      $(this).text('- Topics');
+    }
+  }
+});
+
